@@ -2,11 +2,11 @@ import 'dotenv/config';
 import http from 'node:http';
 import { WebSocketServer } from 'ws';
 
-import tokenCache from './tokenCache';
+import tokenCache from './tokenCache.js';
 import {
   getJupiterPriceSnapshot,
   initializeJupiterPriceService,
-} from './jupiterPriceService';
+} from './jupiterPriceService.js';
 
 const normalizePath = (path: string | undefined, fallback: string) => {
   if (!path) return fallback;
